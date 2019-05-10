@@ -14,6 +14,7 @@
 #   check_tankerkoenig_api.py --apikey <YOUR API-KEY> --stationid 404b23d9-3446-4b68-ab7e-3fdced82c872
 #
 # Changelog:
+#   2019-05-10 CW <doc@snowheaven.de> - Fix: Usage without thresholds
 #   2019-05-10 CW <doc@snowheaven.de> - Add thresholds to graphs; help updated
 #   2019-05-09 CW <doc@snowheaven.de> - Show prices
 #   2019-05-08 CW <doc@snowheaven.de> - Added threshold function
@@ -130,6 +131,8 @@ prices = next(iter(j_price["prices"].values()))
 
 output_prices = ""
 metrics       = ""
+warn          = ""
+crit          = ""
 hits          = 0
 
 for price in prices.items():
