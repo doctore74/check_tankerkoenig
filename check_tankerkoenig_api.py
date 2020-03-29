@@ -69,6 +69,7 @@ except ImportError as e:
 # Defaults
 global exit_code
 exit_code = 0
+threshold_output = ""
 
 # define the program description
 text = 'This program uses the Tankerkoenig API to check prices from gas-stations. Example: ./check_tankerkoenig_api.py --apikey <YOUR-API-KEY> --stationid 404b23d9-3446-4b68-ab7e-3fdced82c872 --warn_diesel 1.22 --crit_diesel 1.20 --warn_e5 1.35 --crit_e5 1.30'
